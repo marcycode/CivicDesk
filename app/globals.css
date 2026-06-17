@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-heading: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: "Aptos", "Segoe UI Variable", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+html {
+  background:
+    radial-gradient(circle at top left, rgba(210, 168, 85, 0.2), transparent 28rem),
+    radial-gradient(circle at bottom right, rgba(31, 77, 58, 0.15), transparent 24rem),
+    #f6f1e8;
+}
+
+body {
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(210, 168, 85, 0.35);
+}

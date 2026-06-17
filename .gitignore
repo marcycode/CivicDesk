@@ -1,0 +1,9 @@
+.next/
+node_modules/
+.codex-temp/
+.env.local
+tsconfig.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

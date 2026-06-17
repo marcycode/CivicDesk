@@ -1,0 +1,151 @@
+{
+  "facilities": [
+    {
+      "id": "fac-city-hall",
+      "name": "City Hall",
+      "address": "110 Laurier Ave W"
+    },
+    {
+      "id": "fac-main-library",
+      "name": "Main Library",
+      "address": "120 Metcalfe St"
+    },
+    {
+      "id": "fac-recreation-centre",
+      "name": "Riverside Recreation Centre",
+      "address": "456 Riverside Dr"
+    }
+  ],
+  "technicians": [
+    {
+      "id": "tech-1",
+      "name": "Maya Chen",
+      "trade": "HVAC"
+    },
+    {
+      "id": "tech-2",
+      "name": "Andre Bouchard",
+      "trade": "Electrical"
+    },
+    {
+      "id": "tech-3",
+      "name": "Leila Singh",
+      "trade": "Plumbing"
+    }
+  ],
+  "workOrders": [
+    {
+      "id": "wo-1001",
+      "title": "City Hall rooftop HVAC unit short cycling",
+      "description": "Unit 3 is turning on and off every few minutes and the west wing is above target temperature.",
+      "facilityId": "fac-city-hall",
+      "category": "HVAC",
+      "priority": "High",
+      "status": "Assigned",
+      "assigneeId": "tech-1",
+      "requesterName": "Jordan Price",
+      "createdAt": "2026-06-14T13:15:00.000Z",
+      "updatedAt": "2026-06-15T08:30:00.000Z",
+      "resolvedAt": null,
+      "activity": [
+        {
+          "id": "act-1001",
+          "type": "created",
+          "message": "Work order created by Jordan Price",
+          "createdAt": "2026-06-14T13:15:00.000Z"
+        },
+        {
+          "id": "act-1002",
+          "type": "assigned",
+          "message": "Assigned to Maya Chen",
+          "createdAt": "2026-06-15T08:30:00.000Z"
+        }
+      ],
+      "comments": [
+        {
+          "id": "com-1001",
+          "author": "Maya Chen",
+          "message": "Inspecting the compressor controls this morning.",
+          "createdAt": "2026-06-15T08:45:00.000Z"
+        }
+      ]
+    },
+    {
+      "id": "wo-1002",
+      "title": "Stuck elevator at Main Library",
+      "description": "Passenger elevator stopped on the second floor and is currently out of service.",
+      "facilityId": "fac-main-library",
+      "category": "Structural",
+      "priority": "Urgent",
+      "status": "In Progress",
+      "assigneeId": "tech-2",
+      "requesterName": "Samira Ali",
+      "createdAt": "2026-06-16T12:10:00.000Z",
+      "updatedAt": "2026-06-16T13:00:00.000Z",
+      "resolvedAt": null,
+      "activity": [
+        {
+          "id": "act-2001",
+          "type": "created",
+          "message": "Work order created by Samira Ali",
+          "createdAt": "2026-06-16T12:10:00.000Z"
+        },
+        {
+          "id": "act-2002",
+          "type": "assigned",
+          "message": "Assigned to Andre Bouchard",
+          "createdAt": "2026-06-16T12:20:00.000Z"
+        },
+        {
+          "id": "act-2003",
+          "type": "status_changed",
+          "message": "Status changed to In Progress",
+          "createdAt": "2026-06-16T13:00:00.000Z"
+        }
+      ],
+      "comments": []
+    },
+    {
+      "id": "wo-1003",
+      "title": "Leak under washroom sink",
+      "description": "Ground-floor washroom sink drips continuously into the cabinet.",
+      "facilityId": "fac-recreation-centre",
+      "category": "Plumbing",
+      "priority": "Medium",
+      "status": "Resolved",
+      "assigneeId": "tech-3",
+      "requesterName": "Noah Peters",
+      "createdAt": "2026-06-10T09:00:00.000Z",
+      "updatedAt": "2026-06-11T17:30:00.000Z",
+      "resolvedAt": "2026-06-11T17:30:00.000Z",
+      "activity": [
+        {
+          "id": "act-3001",
+          "type": "created",
+          "message": "Work order created by Noah Peters",
+          "createdAt": "2026-06-10T09:00:00.000Z"
+        },
+        {
+          "id": "act-3002",
+          "type": "assigned",
+          "message": "Assigned to Leila Singh",
+          "createdAt": "2026-06-10T09:15:00.000Z"
+        },
+        {
+          "id": "act-3003",
+          "type": "status_changed",
+          "message": "Status changed to Resolved",
+          "createdAt": "2026-06-11T17:30:00.000Z"
+        }
+      ],
+      "comments": [
+        {
+          "id": "com-3001",
+          "author": "Leila Singh",
+          "message": "Replaced the trap seal and tested for 10 minutes with no active leak.",
+          "createdAt": "2026-06-11T17:31:00.000Z"
+        }
+      ]
+    }
+  ]
+}
