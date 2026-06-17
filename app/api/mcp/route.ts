@@ -17,6 +17,7 @@ export async function POST(request: Request) {
     const result = await invokeMcpTool(body.tool, body.arguments ?? {});
     return NextResponse.json({ result });
   } catch (error) {
-    return NextResponse.json({ error: error instanceof Error ? error.message : "Unknown error" }, { status: 400 });
+    const msg = error instanceof Error ? error.message : ((error as { message?: string })?.message ?? "Unknown error");
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }

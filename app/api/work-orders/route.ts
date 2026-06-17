@@ -35,6 +35,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(workOrder, { status: 201 });
   } catch (error) {
-    return NextResponse.json({ error: error instanceof Error ? error.message : "Unknown error" }, { status: 400 });
+    const msg = error instanceof Error ? error.message : ((error as { message?: string })?.message ?? "Unknown error");
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }

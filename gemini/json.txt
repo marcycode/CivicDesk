@@ -1,0 +1,20 @@
+{
+  "meanTimeToResolutionHours": 32.5,
+  "meanTimeToResolutionByCategory": {
+    "Plumbing": 32.5
+  },
+  "openBacklogByCategory": {
+    "HVAC": 1,
+    "Structural": 1
+  },
+  "openBacklogByPriority": {
+    "High": 1,
+    "Urgent": 1
+  },
+  "overdueCount": 2,
+  "technicianLoad": [
+    { "technicianId": "tech-2", "technicianName": "Andre Bouchard", "openCount": 1 },
+    { "technicianId": "tech-1", "technicianName": "Maya Chen",      "openCount": 1 },
+    { "technicianId": "tech-3", "technicianName": "Leila Singh",    "openCount": 0 }
+  ]
+}

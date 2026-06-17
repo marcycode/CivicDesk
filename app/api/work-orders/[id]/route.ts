@@ -25,6 +25,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
 
     return NextResponse.json(workOrder);
   } catch (error) {
-    return NextResponse.json({ error: error instanceof Error ? error.message : "Unknown error" }, { status: 400 });
+    const msg = error instanceof Error ? error.message : ((error as { message?: string })?.message ?? "Unknown error");
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }

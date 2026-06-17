@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "mcp": "tsx scripts/mcp-server.ts",
     "supabase:check": "tsx scripts/check-supabase.ts",
-    "supabase:seed": "tsx scripts/seed-supabase.ts"
+    "supabase:seed": "tsx scripts/seed-supabase.ts",
+    "test": "vitest run"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.108.2",
@@ -27,6 +28,7 @@
     "supabase": "^2.106.0",
     "tailwindcss": "3.4.17",
     "tsx": "4.19.4",
-    "typescript": "5.8.3"
+    "typescript": "5.8.3",
+    "vitest": "^4.1.9"
   }
 }

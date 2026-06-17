@@ -52,18 +52,16 @@ export function NewWorkOrderForm({
   return (
     <form className="grid gap-5 rounded-[2rem] border border-stone-200 bg-white/90 p-6 shadow-card" onSubmit={handleSubmit}>
       <div className="grid gap-5 md:grid-cols-2">
-        <Field label="Title" minLength={3} name="title" required />
+        <Field label="Title" name="title" required />
         <Field label="Requester" name="requesterName" required />
       </div>
       <label className="grid gap-2 text-sm font-medium text-stone-700">
         Description
         <textarea
           className="min-h-36 rounded-[1.5rem] border border-stone-200 bg-stone-50 px-4 py-3 outline-none transition focus:border-pine"
-          minLength={10}
           name="description"
           required
         />
-        <span className="text-xs font-normal text-stone-500">Minimum 10 characters.</span>
       </label>
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
         <SelectField
@@ -90,23 +88,12 @@ export function NewWorkOrderForm({
   );
 }
 
-function Field({
-  label,
-  minLength,
-  name,
-  required = false
-}: {
-  label: string;
-  minLength?: number;
-  name: string;
-  required?: boolean;
-}) {
+function Field({ label, name, required = false }: { label: string; name: string; required?: boolean }) {
   return (
     <label className="grid gap-2 text-sm font-medium text-stone-700">
       {label}
       <input
         className="rounded-full border border-stone-200 bg-stone-50 px-4 py-3 outline-none transition focus:border-pine"
-        minLength={minLength}
         name={name}
         required={required}
       />
